@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'volt', '0.8.26'
-
+gem 'font-awesome-rails'
 
 # The following gem's are optional for themeing
 
