@@ -17,8 +17,6 @@ class ProductsController < Volt::ModelController
 
   def remove_product(item)
     _products.delete(item)
-  end  
-
-
+  end
 
 end

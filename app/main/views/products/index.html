@@ -20,8 +20,11 @@
         <div class="well">
           <h2>
             <a href="/products/{{ product.__id }}">{{ product._name }}</a>
-            <button e-click="remove_product(product)" class="btn btn-default pull-right"><span class="glyphicon glyphicon-trash"></span></button>
           </h2>
+          <div class='task-options'>
+            <span e-click="editing_product(product)" class="glyphicon glyphicon-pencil"></span>
+            <span e-click="remove_product(product)" class='glyphicon glyphicon-remove'></span>
+          </div>
         </div>
       </div>
     {{ end }}
