@@ -25,6 +25,9 @@
             <span e-click="editing_product(product)" class="glyphicon glyphicon-pencil"></span>
             <span e-click="remove_product(product)" class='glyphicon glyphicon-remove'></span>
           </div>
+          {{ if product._editing == true }}
+            <h2>hi</h2>
+          {{ end }}
         </div>
       </div>
     {{ end }}

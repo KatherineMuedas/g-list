@@ -15,8 +15,16 @@ class ProductsController < Volt::ModelController
     page._new_product = ''
   end
 
-  def remove_product(item)
-    _products.delete(item)
+  def remove_product(product)
+    _products.delete(product)
+  end
+
+  def editing_product(product)
+    if product._editing == true
+      product._editing = false
+    else
+      product._editing = true
+    end
   end
 
 end
