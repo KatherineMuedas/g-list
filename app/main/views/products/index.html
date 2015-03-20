@@ -1,0 +1,39 @@
+<:Title>
+  Products
+
+<:Body>
+<!--   {{ if Volt.user.nil? }}
+    <div class='text-center home-page-title'>
+      <h1 class="so-big"><a href="/login">Login I say!</a></h1>
+    </div>
+    <META http-equiv="refresh" content="5;URL=/login">
+  {{ else }} -->
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1>Products Index Page</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    {{ model._products.each do |product| }}
+      <div class="col-md-6">
+        <div class="well">
+          <h2>
+            <a href="/products/{{ product.__id }}">{{ product._name }}</a>
+            <button e-click="remove_product(product)" class="btn btn-default pull-right"><span class="glyphicon glyphicon-trash"></span></button>
+          </h2>
+        </div>
+      </div>
+    {{ end }}
+
+    <div class="col-md-12">
+      <form e-submit="add_product" role="form">
+        <div class="form-group">
+          <label>New Product:</label>
+          <input class="form-control" type="text" value="{{ page._new_product  }}" />
+        </div>
+      </form>
+    </div>
+
+  </div>
+
