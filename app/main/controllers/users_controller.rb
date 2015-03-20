@@ -1,4 +1,4 @@
 class UsersController < Volt::ModelController
-  def profile
+  def account
   end
 end
